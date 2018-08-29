@@ -218,6 +218,9 @@ class JointStatePublisher():
                 if name == 'joint_6':
                     #msg.position[i] = msg.position[arm_id_2] - msg.position[arm_id_1]
                     msg.position[3] = msg.position[2] - msg.position[1]
+
+                if name == 'joint_7':
+                    msg.position[4] = msg.position[3]
                 ##########
 
             self.pub.publish(msg)
